@@ -1,0 +1,19 @@
+{
+	"compilerOptions": {
+		"target":"es6",
+		"declaration":true,
+		"declarationDir": "./dist",
+		"module":"ES2015", //never ever change this!!
+		                   //build process needs this to be es2015 does not work properly with different value
+		"noImplicitAny": true,
+		"outDir":"./tsc-build",
+		"strict":true
+	},
+	"include": [
+		"lib/**/*"
+	],
+	"exclude": [
+		"node_modules",
+		"dist"
+	]
+}
