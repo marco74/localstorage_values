@@ -194,4 +194,8 @@ export default class localstorage_values extends eventemitter {
 		// emit event
 		this.emit('remove', key, oldvalue);
 	}
+	
+	public clear = () => {
+		this.storage.setItem(this.storage_key, '{}');
+	}
 }

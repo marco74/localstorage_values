@@ -74,4 +74,13 @@ describe("storage", () => {
 			assert(typeof JSON.parse(store.test).h.i.j == 'undefined');
 		});
 	});
+	describe("clear", () => {
+		it("should remove all values", () => {
+			storage.set('a', 3);
+			storage.set('b', 4);
+			storage.clear();
+			assert(typeof storage.get('a') == 'undefined');
+			assert(typeof storage.get('b') == 'undefined');
+		})
+	})
 })

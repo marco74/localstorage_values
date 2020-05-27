@@ -44,4 +44,5 @@ export default class localstorage_values extends eventemitter {
     * @param {string} key The option's key
     */
     remove: (key: string) => void;
+    clear: () => void;
 }

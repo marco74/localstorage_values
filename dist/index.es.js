@@ -135,6 +135,9 @@ class localstorage_values extends eventemitter {
             // emit event
             this.emit('remove', key, oldvalue);
         };
+        this.clear = () => {
+            this.storage.setItem(this.storage_key, '{}');
+        };
         if (typeof storage_key == 'undefined') {
             throw new Error("invalid value for 'key'");
         }
